@@ -1,11 +1,11 @@
 #!/bin/sh
 
 #MIRROR_DEBIAN="ftp://mirror.hetzner.de/ftp.de.debian.org/debian/"
-MIRROR_DEBIAN="http://ftp.de.debian.org/debian"
+MIRROR_DEBIAN="http://ftp.us.debian.org/debian"
 
 lb config noauto --clean \
 	--apt-recommends false \
-	--bootappend-live "homepage=http://portal.webconverger.com nonetworking nopersistent quickreboot nomodeset noroot splash" \
+	--bootappend-live "homepage=http://transitappliance.org nonetworking nopersistent quickreboot nomodeset noroot splash" \
 	--cache-stages "bootstrap rootfs" \
 	-k 486 \
 	-a i386 \
@@ -13,7 +13,7 @@ lb config noauto --clean \
 	-b iso-hybrid \
 	--apt apt \
 	--username webc \
-	--hostname webconverger \
+	--hostname transitapp \
 	--bootloader syslinux \
 	--archive-areas "main contrib non-free" \
 	--distribution squeeze \
